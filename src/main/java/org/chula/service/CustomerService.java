@@ -19,8 +19,9 @@ public class CustomerService {
   }
 
   @Transactional
-  public void addCustomer(Customer customer) {
+  public Customer addCustomer(Customer customer) {
     customerRepository.persist(customer);
+    return customer;
   }
 
 }

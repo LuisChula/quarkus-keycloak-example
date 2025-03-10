@@ -24,8 +24,8 @@ public class CustomerResource {
 
   @POST
   @RolesAllowed("manager")
-  public void addCustomer(Customer customer) {
-    customerService.addCustomer(customer);
+  public Customer addCustomer(Customer customer) {
+    return customerService.addCustomer(customer);
   }
 
 }
